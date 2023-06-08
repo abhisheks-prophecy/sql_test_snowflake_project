@@ -24,3 +24,14 @@ model-paths:
 macro-paths:
 - "macros"
 target-path: "target"
+
+# ==================
+# Variable Configs
+# ==================
+vars:
+  v_project_snow_int: 22
+
+# ============
+# Misc
+# ============
+dispatch: []

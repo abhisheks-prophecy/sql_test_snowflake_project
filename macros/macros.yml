@@ -1,0 +1,19 @@
+---
+version: 2
+macros:
+- name: "qa_all_not_null_snow"
+  arguments:
+  - name: "model"
+    type: "table"
+  - name: "column_name"
+    type: "value"
+  macroType: "query"
+- name: "qa_all_null_snow"
+  arguments:
+  - name: "model"
+    type: "table"
+    description: "{\"ProphecyType\": \"table\"}"
+  - name: "column_name"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "query"

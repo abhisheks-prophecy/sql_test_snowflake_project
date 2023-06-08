@@ -8,7 +8,79 @@ buildSystemDetails: null
 pipelines: {}
 datasets: {}
 templates: {}
-jobs: {}
+jobs:
+  jobs/AirflowMWAA_Snow:
+    name: AirflowMWAA_Snow
+    description: ''
+    fabricUID: 5275
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 * * 7
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2023-06-08 07:15:42'
+    modifiedAt: '2023-06-08 07:22:35'
+    author: abhisheks+e2etests@prophecy.io
+  jobs/AirflowGCP_Snow:
+    name: AirflowGCP_Snow
+    description: ''
+    fabricUID: 4315
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 * * 4
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2023-06-08 07:18:05'
+    modifiedAt: '2023-06-08 07:22:41'
+    author: abhisheks+e2etests@prophecy.io
+  jobs/AirflowPM_Snow:
+    name: AirflowPM_Snow
+    description: ''
+    fabricUID: 5117
+    scheduler:
+      Prophecy: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 * * 4
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2023-06-08 07:18:50'
+    modifiedAt: '2023-06-08 07:22:47'
+    author: abhisheks+e2etests@prophecy.io
 functions:
   author: null
   createdAt: '2023-06-08 06:26:15'
@@ -18,10 +90,638 @@ functions:
   udafs: {}
   expressions: {}
 subgraphs: {}
-sqlModels: {}
-sqlMacros: {}
-sqlSeeds: {}
-sqlSources: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/test_exclude_me:
+    name: test_exclude_me
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_TIMESTAMPLTZ
+        dataType:
+          type: Timestamp
+      - name: C_TIMESTAMP_NTZ
+        dataType:
+          type: Timestamp
+      - name: C_VARIANT
+        dataType:
+          type: Variant
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/test_exclude_me.sql
+    - .prophecy/ide/models/test_exclude_me.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-06-08 07:03:35'
+    modifiedAt: '2023-06-08 07:03:35'
+  .prophecy/metadata/sqlmodels/test_snow_main_useall:
+    name: test_snow_main_useall
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_TIMESTAMPLTZ
+        dataType:
+          type: Timestamp
+      - name: C_TIMESTAMP_NTZ
+        dataType:
+          type: Timestamp
+      - name: C_VARIANT
+        dataType:
+          type: Variant
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/test_snow_main_useall.sql
+    - .prophecy/ide/models/test_snow_main_useall.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-06-08 06:53:55'
+    modifiedAt: '2023-06-08 06:53:55'
+  .prophecy/metadata/sqlmodels/test_snowflake_main_model_1:
+    name: test_snowflake_main_model_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_TIMESTAMPLTZ
+        dataType:
+          type: Timestamp
+      - name: C_TIMESTAMP_NTZ
+        dataType:
+          type: Timestamp
+      - name: C_VARIANT
+        dataType:
+          type: Variant
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/test_snowflake_main_model_1.sql
+    - .prophecy/ide/models/test_snowflake_main_model_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-06-08 06:40:28'
+    modifiedAt: '2023-06-08 06:40:28'
+sqlMacros:
+  .prophecy/metadata/sqlmacros/qa_all_not_null_snow:
+    name: qa_all_not_null_snow
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/qa_all_null_snow.sql
+    - macros/macros.yml
+    createdAt: '2023-06-08 06:49:57'
+    modifiedAt: '2023-06-08 06:49:57'
+  .prophecy/metadata/sqlmacros/qa_all_null_snow:
+    name: qa_all_null_snow
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/qa_all_null_snow.sql
+    - .prophecy/ide/macros/qa_all_null_snow.json
+    - macros/macros.yml
+    createdAt: '2023-06-08 06:49:44'
+    modifiedAt: '2023-06-08 06:49:44'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/goods_classification_snowflake_master:
+    name: goods_classification_snowflake_master
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: NZHSC_Level_2_Code_HS4
+        dataType:
+          type: Number
+      - name: NZHSC_Level_1_Code_HS2
+        dataType:
+          type: Number
+      - name: NZHSC_Level_2
+        dataType:
+          type: String
+      - name: NZHSC_Level_1
+        dataType:
+          type: String
+      - name: Status_HS4
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - seeds/goods_classification_snowflake_master.csv
+    createdAt: '2023-06-08 06:45:34'
+    modifiedAt: '2023-06-08 06:45:34'
+sqlSources:
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SCHEMA:
+    name: QA_DATABASE.QA_SCHEMA
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-06-08 06:45:06'
+    modifiedAt: '2023-06-08 06:45:06'
+    tables:
+    - name: ALL_TYPE_TABLE_NON_GEOMETRY
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-06-08 06:45:06'
+      modifiedAt: '2023-06-08 06:45:06'
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SIMPLE_SCHEMA:
+    name: QA_DATABASE.QA_SIMPLE_SCHEMA
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-06-08 06:45:07'
+    modifiedAt: '2023-06-08 06:45:07'
+    tables:
+    - name: ALL_TYPE_TABLE_SMALLER_1
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-06-08 06:45:07'
+      modifiedAt: '2023-06-08 06:45:07'
+    - name: TABLE_COMPLEX_TYPES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_ARRAY_INT
+          dataType:
+            type: Array
+        - name: C_ARRAY_FLOAT
+          dataType:
+            type: Array
+        - name: C_ARRAY_STRING
+          dataType:
+            type: Array
+        - name: C_ARRAY_OBJECT
+          dataType:
+            type: Array
+        - name: C_ARRAY_ARRAY
+          dataType:
+            type: Array
+        - name: C_ARRAY_VARIANT
+          dataType:
+            type: Array
+        - name: C_OBJECT_1
+          dataType:
+            type: Object
+        - name: C_OBJECT_2
+          dataType:
+            type: Object
+        - name: C_OBJECT_3
+          dataType:
+            type: Object
+        - name: C_OBJECT_4
+          dataType:
+            type: Object
+        - name: C_OBJECT_5
+          dataType:
+            type: Object
+        - name: C_VARIANT_1
+          dataType:
+            type: Variant
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-06-08 06:54:44'
+      modifiedAt: '2023-06-08 06:54:44'
+    - name: TABLE_COMPLEX_TYPES_1
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_ARRAY_INT
+          dataType:
+            type: Array
+        - name: C_ARRAY_FLOAT
+          dataType:
+            type: Array
+        - name: C_ARRAY_STRING
+          dataType:
+            type: Array
+        - name: C_ARRAY_OBJECT
+          dataType:
+            type: Array
+        - name: C_ARRAY_ARRAY
+          dataType:
+            type: Array
+        - name: C_ARRAY_VARIANT
+          dataType:
+            type: Array
+        - name: C_OBJECT_1
+          dataType:
+            type: Object
+        - name: C_OBJECT_2
+          dataType:
+            type: Object
+        - name: C_OBJECT_3
+          dataType:
+            type: Object
+        - name: C_OBJECT_4
+          dataType:
+            type: Object
+        - name: C_OBJECT_5
+          dataType:
+            type: Object
+        - name: C_VARIANT_1
+          dataType:
+            type: Variant
+        - name: C_VARIANT_2
+          dataType:
+            type: Variant
+        - name: C_VARIANT_3
+          dataType:
+            type: Variant
+        - name: C_VARIANT_4
+          dataType:
+            type: Variant
+        - name: C_VARIANT_5
+          dataType:
+            type: Variant
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-06-08 06:54:45'
+      modifiedAt: '2023-06-08 06:54:45'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
