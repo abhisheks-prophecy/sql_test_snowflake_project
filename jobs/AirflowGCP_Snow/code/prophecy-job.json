@@ -22,14 +22,15 @@
       "clusterMode" : "Single"
     },
     "availableFabrics" : [ {
-      "id" : "5117",
-      "name" : "dev_airflow_pm"
-    }, {
       "id" : "4315",
       "name" : "dev_airflow"
     }, {
       "id" : "5275",
       "name" : "dev_airflow_mwaa"
+    }, {
+      "id" : "6629",
+      "name" : "dev_airflow_prophecy_managed",
+      "trialStartDate" : 1694771485007
     } ],
     "catchup" : true,
     "scheduleTimeZone" : "UTC"

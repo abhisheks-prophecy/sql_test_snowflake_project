@@ -1,14 +1,14 @@
 {
-  "qa_all_not_null_snow" : {
-    "name" : "qa_all_not_null_snow",
+  "qa_all_null_snow" : {
+    "name" : "qa_all_null_snow",
     "macroType" : "query",
-    "definition" : "\n\n\nselect * from {{ model }} where {{ column_name }} is not null",
+    "definition" : "\n\n\n\n\n\n\nselect * from {{ model }} where {{ column_name }} is not null",
     "parameters" : {
       "type" : "record",
       "fields" : [ {
         "name" : "model",
         "kind" : {
-          "type" : "table"
+          "type" : "value"
         },
         "optional" : false,
         "isWorkflowNodeConfiguration" : false,
@@ -25,16 +25,16 @@
     },
     "staleState" : "none"
   },
-  "qa_all_null_snow" : {
-    "name" : "qa_all_null_snow",
+  "qa_all_not_null_snow" : {
+    "name" : "qa_all_not_null_snow",
     "macroType" : "query",
-    "definition" : "\n\n\n\n\n\nselect * from {{ model }} where {{ column_name }} is not null",
+    "definition" : "\n\n\n\nselect * from {{ model }} where {{ column_name }} is not null",
     "parameters" : {
       "type" : "record",
       "fields" : [ {
         "name" : "model",
         "kind" : {
-          "type" : "table"
+          "type" : "value"
         },
         "optional" : false,
         "isWorkflowNodeConfiguration" : false,
